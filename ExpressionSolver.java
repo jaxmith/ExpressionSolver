@@ -6,11 +6,10 @@ import java.util.Scanner;
  */
 public class ExpressionSolver {
 
-  
     public static void main(String[] args) {
         
-        IntStack nums = new IntStack();
-        CharStack ops = new CharStack();
+        Stack nums = new Stack();
+        Stack ops = new Stack();
         Scanner scanner = new Scanner(System.in);
         System.out.println("Enter a fully parenthesized expression.");
         String input = scanner.nextLine();
@@ -28,7 +27,11 @@ public class ExpressionSolver {
         System.out.println("The answer to the expression is: " + nums.pop());      
     }
     
-    public static int solve(int i, int j, char c){
+    public static int solve(Object num1, Object num2, Object char1){
+        
+        int i = (Integer) num1;
+        int j = (Integer) num2;
+        char c = (Character) char1;
         
         if(c == '-')
             return j - i;
@@ -39,8 +42,7 @@ public class ExpressionSolver {
         else if(c == '+')
             return i + j;
         else
-            return -1;
-        
+            return -1;       
     }
     
 }

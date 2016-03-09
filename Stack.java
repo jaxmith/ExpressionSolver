@@ -5,19 +5,19 @@ package stacks;
  *
  * @author Jack
  */
-public class IntStack {
+public class Stack<T> {
     
     private final int CAPACITY = 100;
-    private int[] data;
+    private T[] data;
     private int top;
     
-    public IntStack(){
+    public Stack(){
         top = -1;
-        data = new int[CAPACITY];
+        data = (T[])new Object[CAPACITY];
     }
     
-    public int pop(){
-        int result = -1;
+    public T pop(){
+        T result = null;
         if(top != -1){
             result = data[top];
             top--;
@@ -25,22 +25,22 @@ public class IntStack {
         return result;
     }
     
-    public int peek(){
-        int result = 0;
+    public T peek(){
+        T result = null;
         if(top != -1){
             result = data[top];
         }
         return result;
     }
     
-    public void push(int i){
+    public void push(T data){
         if(top != CAPACITY - 1){
             top++;
-            data[top] = i;
+            this.data[top] = data;
         }
     }
     
-    public int[] getData(){
+    public T[] getData(){
         return data;
     }
     
