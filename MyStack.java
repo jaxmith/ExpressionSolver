@@ -3,15 +3,16 @@ package stacks;
 
 /**
  *
- * @author Jack
+ * @author Jack Smith
+ * ID: 110366081
  */
-public class Stack<T> {
+public class MyStack<T> {
     
     private final int CAPACITY = 100;
     private T[] data;
     private int top;
     
-    public Stack(){
+    public MyStack(){
         top = -1;
         data = (T[])new Object[CAPACITY];
     }

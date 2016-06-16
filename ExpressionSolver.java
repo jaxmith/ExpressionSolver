@@ -8,8 +8,8 @@ public class ExpressionSolver {
 
     public static void main(String[] args) {
         
-        Stack nums = new Stack();
-        Stack ops = new Stack();
+        MyStack<Integer> nums = new MyStack<>();
+        MyStack<Character> ops = new MyStack<>();
         Scanner scanner = new Scanner(System.in);
         System.out.println("Enter a fully parenthesized expression.");
         String input = scanner.nextLine();
